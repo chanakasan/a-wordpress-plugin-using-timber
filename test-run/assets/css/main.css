@@ -5,3 +5,14 @@
     background: #fff;
     border: 1px solid #ccc;
 }
+
+.test-run-tab-container {
+    padding: 40px 20px;
+}
+
+
+.test-run-info-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #eee;
+}

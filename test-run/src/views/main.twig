@@ -1,4 +1,15 @@
+{% import 'macros.twig' as h %}
+
 <div id="test-run-container">
   <h1>Test Run</h1>
   <p>Hello! This is our admin page</p>
+
+  <nav class="nav-tab-wrapper">
+    <a href="?page={{ page_name }}&tab=1" class="{{ h.tab_classes(1, current_tab) }}">Info</a>
+    <a href="?page={{ page_name }}&tab=2" class="{{ h.tab_classes(2, current_tab) }}">Settings</a>
+  </nav>
+
+  <div class="tab-content">
+    {{ include(current_tab_partial) }}
+  </div>
 </div>
