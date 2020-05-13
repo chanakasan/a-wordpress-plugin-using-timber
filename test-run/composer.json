@@ -1,0 +1,12 @@
+{
+    "name": "chk/wp-test-run",
+    "description": "A wordpress plugin to test various features.",
+    "authors": [
+        {
+            "name": "Chanaka Abeysinghe"
+        }
+    ],
+    "require": {
+        "timber/timber": "^1.15"
+    }
+}
