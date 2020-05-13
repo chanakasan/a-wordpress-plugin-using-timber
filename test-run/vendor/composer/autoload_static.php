@@ -16,6 +16,7 @@ class ComposerStaticInit65220cd95052714df049d3bd5325a845
         array (
             'Twig\\' => 5,
             'Timber\\' => 7,
+            'TestRun\\' => 8,
         ),
         'S' => 
         array (
@@ -36,6 +37,10 @@ class ComposerStaticInit65220cd95052714df049d3bd5325a845
         'Timber\\' => 
         array (
             0 => __DIR__ . '/..' . '/timber/timber/lib',
+        ),
+        'TestRun\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -190,6 +195,7 @@ class ComposerStaticInit65220cd95052714df049d3bd5325a845
         'Routes' => __DIR__ . '/..' . '/upstatement/routes/Routes.php',
         'Symfony\\Polyfill\\Ctype\\Ctype' => __DIR__ . '/..' . '/symfony/polyfill-ctype/Ctype.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
+        'TestRun\\Init' => __DIR__ . '/../..' . '/src/Init.php',
         'Timber\\Admin' => __DIR__ . '/..' . '/timber/timber/lib/Admin.php',
         'Timber\\Archives' => __DIR__ . '/..' . '/timber/timber/lib/Archives.php',
         'Timber\\Cache\\Cleaner' => __DIR__ . '/..' . '/timber/timber/lib/Cache/Cleaner.php',
