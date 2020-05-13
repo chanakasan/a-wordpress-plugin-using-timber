@@ -1,0 +1,7 @@
+#test-run-container {
+    margin: 0 auto;
+    padding: 1.5rem;
+    max-width: 65rem;
+    background: #fff;
+    border: 1px solid #ccc;
+}

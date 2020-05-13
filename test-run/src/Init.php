@@ -18,6 +18,7 @@ class Init
   protected function init()
   {
     add_action('admin_menu', [$this, 'admin_menu_cb']);
+    add_action('admin_enqueue_scripts', [$this, 'register_and_load_assets_cb']);
   }
 
   public function admin_menu_cb()
@@ -30,5 +31,22 @@ class Init
   {
     Timber::$locations = __DIR__.'/views';
     Timber::render('main.twig');
+  }
+
+  public function register_and_load_assets_cb($hook)
+  {
+    if ($hook != 'toplevel_page_test-run') {
+      return;
+    }
+
+    // Ref: https://developer.wordpress.org/reference/functions/wp_register_style/
+    // Ref: https://developer.wordpress.org/reference/functions/wp_register_script/
+    wp_register_style('test-run-css', plugins_url('assets/css/main.css', TEST_RUN_PLUGIN_FILE));
+    wp_register_script('test-run-js', plugins_url('assets/js/main.js', TEST_RUN_PLUGIN_FILE));
+
+    // Ref: https://developer.wordpress.org/reference/functions/wp_enqueue_style/
+    // Ref: https://developer.wordpress.org/reference/functions/wp_enqueue_script/
+    wp_enqueue_style('test-run-css');
+    wp_enqueue_script('test-run-js');
   }
 }
