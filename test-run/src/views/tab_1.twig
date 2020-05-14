@@ -1,5 +1,10 @@
 <div class="test-run-tab-container">
   <div class="test-run-info-box">
-    Info Tab
+    <strong>Visitor Info</strong>
+
+    <pre>
+* Visitor Name: |{{ function('get_option', 'testrun_visitor_name') }}|
+* Visitor Company: |{{ function('get_option', 'testrun_visitor_company') }}|
+    </pre>
   </div>
 </div>

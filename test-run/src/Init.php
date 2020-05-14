@@ -15,10 +15,25 @@ class Init
 
   protected function init()
   {
+    // Ref: https://developer.wordpress.org/reference/hooks/admin_init/
     // Ref: https://developer.wordpress.org/reference/hooks/admin_menu/
     // Ref: https://developer.wordpress.org/reference/hooks/admin_enqueue_scripts/
+    add_action('admin_init', [$this, 'admin_init_cb']);
     add_action('admin_menu', [$this, 'admin_menu_cb']);
     add_action('admin_enqueue_scripts', [$this, 'register_and_load_assets_cb']);
+  }
+
+  public function admin_init_cb()
+  {
+    // Ref: https://developer.wordpress.org/reference/functions/register_setting/
+    // Ref: https://developer.wordpress.org/reference/functions/add_settings_section/
+    // Ref: https://developer.wordpress.org/reference/functions/add_settings_field/
+    register_setting('test-run', 'testrun_visitor_name');
+    register_setting('test-run', 'testrun_visitor_company');
+    add_settings_section('testrun_section_1', 'Section One', ['\TestRun\SettingsView', 'render_section_1_cb'], 'test-run');
+    add_settings_section('testrun_section_2', 'Section Two', ['\TestRun\SettingsView', 'render_section_2_cb'], 'test-run');
+    add_settings_field('testrun_visitor_name', 'Visitor Name', ['\TestRun\SettingsView', 'render_field_1_cb'], 'test-run', 'testrun_section_1');
+    add_settings_field('testrun_visitor_company', 'Company Name', ['\TestRun\SettingsView', 'render_field_2_cb'], 'test-run', 'testrun_section_2');
   }
 
   public function admin_menu_cb()

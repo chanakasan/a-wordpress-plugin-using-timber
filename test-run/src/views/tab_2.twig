@@ -1,5 +1,13 @@
 <div class="test-run-tab-container">
   <div class="test-run-info-box">
-    Settings Tab
+    An Example Settings Form
+  </div>
+
+  <div>
+    <form method="POST" action="options.php">
+      {{ function('settings_fields', 'test-run') }}
+      {{ function('do_settings_sections', 'test-run') }}
+      {{ function('submit_button') }}
+    </form>
   </div>
 </div>
