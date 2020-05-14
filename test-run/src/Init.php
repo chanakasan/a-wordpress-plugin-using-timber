@@ -15,6 +15,8 @@ class Init
 
   protected function init()
   {
+    // Ref: https://developer.wordpress.org/reference/hooks/admin_menu/
+    // Ref: https://developer.wordpress.org/reference/hooks/admin_enqueue_scripts/
     add_action('admin_menu', [$this, 'admin_menu_cb']);
     add_action('admin_enqueue_scripts', [$this, 'register_and_load_assets_cb']);
   }
