@@ -6,7 +6,7 @@ namespace TestRun;
  * We can encapsulated our plugin code inside a class like below.
  * This will prevent us from adding things to global namespace.
  */
-class Init
+class Main
 {
   protected function __construct()
   {
