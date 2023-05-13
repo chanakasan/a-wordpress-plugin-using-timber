@@ -8,12 +8,7 @@ namespace TestRun;
  */
 class Init
 {
-  public function __construct()
-  {
-    $this->init();
-  }
-
-  protected function init()
+  protected function __construct()
   {
     // Ref: https://developer.wordpress.org/reference/hooks/admin_init/
     // Ref: https://developer.wordpress.org/reference/hooks/admin_menu/
